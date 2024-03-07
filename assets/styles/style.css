@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+
+  height: 100vh;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header.navbar-container {
+  width: 100%;
+  /* max-width: 1200px; */
+  padding-block: 1rem;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: black;
+  z-index: 9999;
+}
+
+header.navbar-container .logo h1 {
+  width: 150px;
+  color: white;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: white;
+
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  backgroung-color: #42c77;
+  color: gray;
+}
+
+main {
+  padding: 20px;
+  overflow: auto;
+  display: flex;
+  flex-direction: row-reverse
+}
+
+aside {
+  padding-left: 20px;
+  width: 25%;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+
+#content {
+  float: left;
+  width: 75%;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.profile img {
+  width: 200px;
+}
+
+.profile section h3 {
+  text-align: center;
+}
+
+.profile section table {
+  text-align: center;
+}
+
+.card {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  main{
+    flex-direction: column;
+  }
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+}
